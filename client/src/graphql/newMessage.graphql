@@ -1,0 +1,11 @@
+mutation newMessage($message: String! , $email: String!) {
+  postMessage(message: $message, email:$email){
+    success
+		message
+    posts{
+      postData
+      user_email
+      createdAt
+    }
+  }
+}
